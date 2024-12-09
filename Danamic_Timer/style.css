@@ -1,0 +1,111 @@
+﻿*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+
+body
+{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:20vh;
+    background:#2f363e;
+
+}
+
+#time{
+    display:flex;
+    gap:5px;
+}
+
+#time .circle {
+position: relative;
+width: 100px;
+height: 100px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#time .circle svg {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    transform:rotate(270deg);
+}
+
+/*timer and width define here */
+#time .circle svg circle{
+    width:100%;
+    height:100%;
+    fill:transparent;
+    stroke-width:5;
+    stroke:#282828;
+    stroke-linecap:round;
+    transform:translate(5px, 5px);
+  
+}
+
+#time .circle svg circle:nth-child(2){
+stroke:var(--clr);
+stroke-dasharray:440;
+stroke-dashoffset:440;
+}
+
+/*circle elements the timer counts */
+#time div{
+    position:absolute;
+    text-align:center;
+    font-weight:500;
+    color:#fff;
+    font-size:0.9em;
+}
+
+/*Days, motns, hours, minutes, and seconds positioning*/
+#time div span{
+transform:translateX(-25%) translateY(-10%);
+font-size:0.7em;
+font-weight:300;
+letter-spacing:0.1em;
+}
+
+
+#time .dots{
+position:absolute;
+height:100%;
+width:100%;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:flex-start;
+z-index:1000;
+}
+
+#time .dots::before {
+content: '';
+position:absolute;
+top: 15px;
+left:32px;
+width: 12px;
+height: 12px;
+background: var(--clr);
+border-radius: 50%;
+box-shadow: 0 0 20px var(--clr),
+0 0 60px var(--clr);
+}
+
+.newYear{
+    font-size:8em;
+    font-weight:500;
+    color:white;
+    text-align:center;
+    display:none;
+}
+
+.newYear span{
+font-size:0.5em;
+font-weight:300;
+}

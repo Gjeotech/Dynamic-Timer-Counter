@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        let endDate = '10/29/2023/00:00:00';
+        // date format 'mm/dd/yyyy'
+
+        let x = setInterval(function () {
+            let now = new Date(endDate).getTime();
+            let countDown = new Date().getTime();
+            let distance = now - countDown;
+
+            //time calculator for days, hourse minute and secs
+
+            let d = Math.floor(distance / (1000 * 60 * 60 * 24));
+            let h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let s = Math.floor((distance % (1000 * 60)) / (1000));
+
+
+            /// optput the result
+            days.innerHTML = d + "<br><span>Days</span>";
+            hours.innerHTML = h + "<br><span>Hours</span>";
+            minutes.innerHTML = m + "<br><span>minutes</span>";
+            seconds.innerHTML = s + "<br><span>seconds</span>";
+
+    </script>
+</body>
+</html>
